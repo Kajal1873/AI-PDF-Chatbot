@@ -18,6 +18,8 @@ def create_vector_store(embeddings):
 
 def save_vector_store(index, filename):
 
+    os.makedirs("indexes", exist_ok=True)
+
     path = os.path.join("indexes", filename + ".faiss")
 
     faiss.write_index(index, path)
@@ -37,7 +39,7 @@ def save_chunks(chunks, filename):
     with open(path, "wb") as file:
 
         pickle.dump(chunks, file)
-        
+
 def load_chunks(filename):
 
     path = os.path.join("chunks", filename + ".pkl")
