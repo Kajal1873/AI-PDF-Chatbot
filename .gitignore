@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+
+# Environment Variables
+.env
+
+# Uploaded PDFs
+data/
+
+# Vector Database
+indexes/
+chunks/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
